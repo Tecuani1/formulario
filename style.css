@@ -1,0 +1,300 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  :root {
+    --main-width-600: 100%;
+    --section-padding-600: 0 0 1em 0;
+    --section-padding-900: 0 0 1em 0;
+    --section-container-width: 90%;
+    --group-width: 90%;
+    --input-padding: 0 16px;
+    --group-height: 60px;
+    --group-label-width: 100%;
+    --label-width: 90%;
+    --group-label-height: 60px;
+    --input-width: 100%;
+    --input-height: 40px;
+    --primary-color: #1a73e8;
+    --primary-color-hover: #1558c8;
+    --input-border-width: 1px;
+    --input-border-radius: 4px;
+  }
+  
+  body {
+    background-color: #f8fafd;
+    display: flex;
+    justify-content: center;
+    font-family: "Roboto", sans-serif;
+  }
+  
+  .contact-form {
+    width: 100%;
+    padding: 20px;
+  }
+  
+  .main-container {
+    width: var(--main-width-600);
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+  }
+  
+  .section__icon {
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+  }
+  
+  .section__icon-img {
+    height: 24px;
+    filter: invert(20%) sepia(10%) saturate(500%) hue-rotate(190deg)
+      brightness(80%) contrast(90%);
+  }
+  
+  .section-contact,
+  .section-workplace,
+  .section-email,
+  .section-phone,
+  .section-birthday,
+  .section-notes {
+    display: flex;
+    padding: var(--section-padding-600);
+    width: var(--section-container-width);
+    justify-content: center;
+  }
+  
+  .section-group {
+    display: flex;
+    flex-direction: column;
+    width: var(--group-width);
+  }
+  
+  .section-group__label {
+    width: var(--group-label-width);
+    height: var(--group-label-height);
+  }
+  
+  .section-group__input {
+    width: var(--input-width);
+    height: var(--input-height);
+    padding: var(--input-padding);
+    border-width: var(--input-border-width);
+    border-radius: var(--input-border-radius);
+  }
+  
+  .section-email__label {
+    display: flex;
+    flex-direction: column;
+    width: var(--label-width);
+  }
+  
+  .section-email__input {
+    width: var(--input-width);
+    height: var(--input-height);
+    padding: var(--input-padding);
+    border-width: var(--input-border-width);
+    border-radius: var(--input-border-radius);
+  }
+  
+  .section__country-phone {
+    width: var(--group-width);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5em;
+  }
+  
+  .section__country-label,
+  .section__label-label,
+  .section__number-label {
+    width: var(--group-label-width);
+    height: var(--group-label-height);
+  }
+  
+  .section__country-select,
+  .section__number-input,
+  .section__label-select {
+    width: var(--input-width);
+    height: var(--input-height);
+    border-width: var(--input-border-width);
+    border-radius: var(--input-border-radius);
+  }
+  
+  .section__month-day-year {
+    width: var(--group-width);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5em;
+  }
+  
+  .section__day-label,
+  .section__month-label,
+  .section__year-label {
+    width: var(--group-label-width);
+  }
+  
+  .section__day-input {
+    width: var(--input-width);
+    height: var(--input-height);
+    border-width: 1px;
+    border-radius: 4px;
+    border-width: var(--input-border-width);
+    border-radius: var(--input-border-radius);
+  }
+  
+  .section__month-select {
+    width: var(--input-width);
+    height: var(--input-height);
+    border-width: var(--input-border-width);
+    border-radius: var(--input-border-radius);
+  }
+  
+  .section__year-input {
+    width: var(--input-width);
+    height: var(--input-height);
+    border-width: var(--input-border-width);
+    border-radius: var(--input-border-radius);
+  }
+  
+  .section__notes-label {
+    width: var(--label-width);
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .section__notes-textarea {
+    width: var(--input-width);
+    height: 60px;
+    border-width: var(--input-border-width);
+    border-radius: var(--input-border-radius);
+  }
+  
+  .save-button {
+    width: var(--section-container-width);
+    display: flex;
+    justify-content: right;
+    padding-right: 5px;
+  }
+  
+  .save-button button {
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 16px;
+    padding: 10px 24px;
+    border: none;
+    border-radius: 24px;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .save-button button:hover {
+    background-color: var(--primary-color-hover);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  @media (min-width: 600px) and (max-width: 899px) {
+    .section-contact,
+    .section-workplace,
+    .section-email,
+    .section-phone,
+    .section-birthday,
+    .section-notes {
+      flex-wrap: wrap;
+      padding: var(--section-padding-900);
+    }
+  
+    .section__country-label {
+      width: 20%;
+    }
+  
+    .section__number-label {
+      width: 78%;
+    }
+  
+    .section__label-label {
+      display: flex;
+      flex-direction: column;
+    }
+  
+    .section__day-label {
+      width: 20%;
+    }
+  
+    .section__month-label {
+      width: 78%;
+    }
+  
+    .section__year-label {
+      display: flex;
+      flex-direction: column;
+    }
+  
+    .save-button {
+      padding-right: 1em;
+    }
+  }
+  
+  @media (min-width: 900px) {
+    .contact-form {
+      padding: 40px;
+    }
+  
+    .section__country-phone,
+    .section__month-day-year {
+      flex-wrap: nowrap;
+      align-items: center;
+      justify-content: space-between;
+    }
+  
+    .section__country-phone,
+    .section__month-day-year {
+      gap: 1em;
+    }
+  
+    .section__country-label {
+      width: 20%;
+    }
+  
+    .section__number-label {
+      width: 70%;
+    }
+  
+    .section__label-label {
+      width: 50%;
+    }
+  
+    .section__day-label {
+      width: 20%;
+    }
+  
+    .section__month-label {
+      width: 70%;
+    }
+  
+    .section__year-label {
+      width: 50%;
+    }
+  
+    .save-button {
+      padding-right: 1.5em;
+    }
+  }
+  
+  @media (min-width: 1200px) {
+    .contact-form {
+      max-width: 1500px;
+    }
+  
+    .section-group {
+      flex-direction: row;
+      gap: 1em;
+    }
+  
+    .save-button {
+      padding-right: 2em;
+    }
+  }
