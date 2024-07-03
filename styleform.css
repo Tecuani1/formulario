@@ -3,6 +3,8 @@
   --background-color: rgb(243, 243, 243);
   --border-color: #b6afaf;
   --shadow-color: rgba(0, 0, 0, 0.1);
+  --button-bg-color: #007bff; /* Color de fondo del botón */
+  --button-text-color: #ffffff; /* Color del texto del botón */
 
   /* Variables de espaciado */
   --padding: 10px;
@@ -89,6 +91,27 @@ textarea {
   resize: vertical;
 }
 
+.button-container {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  padding: var(--margin);
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: var(--border-radius);
+  background-color: var(--button-bg-color);
+  color: var(--button-text-color);
+  font-size: 1em;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: darken(var(--button-bg-color), 10%);
+}
+
 /* Media Queries */
 @media (max-width: 600px) {
   .form-row {
@@ -97,12 +120,8 @@ textarea {
   }
 
   .icon-1 {
-    top: 40%;
+    top: 60%;
   }
-
-  /* .form-group {
-    padding-right: var(--margin);
-  } */
 
   .birthday-input {
     flex-wrap: wrap;
@@ -127,15 +146,16 @@ textarea {
 }
 
 @media (max-width: 900px) {
-  .form-row {
-    flex-direction: column;
-  }
-
-  .form-group input#firstName,
-  input#lastName {
-    width: 100%;
-  }
-
+    .form-row {
+      flex-direction: column;
+    }
+  
+    .form-group {
+      width: 100%;
+      margin-left: 0;
+      margin-right: 0;
+    }
+  
   .birthday-input select,
   .birthday-input input {
     font-size: 1em;
@@ -154,7 +174,7 @@ textarea {
   }
 }
 
-@media (min-width: 1200px) {
+@media (max-width: 1200px) {
   .form-1 {
     gap: 5px;
 
@@ -167,13 +187,4 @@ textarea {
     }
   }
 
-  /* .form-group {
-    padding-right: var(--margin);
-  } */
-
-  .form-group input,
-  .form-group select,
-  .form-group textarea {
-    width: 100%;
-  }
 }
